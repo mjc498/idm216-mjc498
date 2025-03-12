@@ -14,24 +14,6 @@
 }
 
 /* ------------------------------------------ */
-/* TYPOGRAPHY */
-@font-face {
-    font-family: 'Tusker Grotesk';
-    src: url('TuskerGrotesk-5500Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Moderat';
-    src: url('Moderat-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* ------------------------------------------ */
 /* GENERAL STYLES */
 body, html {
     margin: 0;
@@ -39,10 +21,121 @@ body, html {
     box-sizing: border-box;
 }
 
-h1 {
-    font-family: 'Tusker Grotesk', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 500;
+
+body {
+    font-family: 'Moderat';
+    background-color: var(--lennox-tan);
     color: var(--lennox-black);
-    margin: 0;
+}
+
+header {
+    font-family: 'Tusker Grotesk';
+    font-weight: 500;
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--lennox-black);
+    color: var(--lennox-tan);
+}
+
+h3 {
+    border-bottom: 3px solid var(--lennox-black);
+    width: fit-content;
+    font-size: 22px;
+    margin: 20px auto; 
+}
+
+h4,
+h4 a {
+    font-size: 18px;
+}
+
+h4 a {
+    text-decoration: none;
+    color: var(--lennox-orange);
+}
+
+p {
+    text-align: center; 
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 10px; 
+    text-align: left;
+    width: 80%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+ul {
+    margin-left: auto;
+    width: 80%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--lennox-orange);
+}
+
+/* ------------------------------------------ */
+/* FORMATTING */
+.text-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;     
+}
+
+/* ------------------------------------------ */
+/* GIFS */
+.final-gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.final-gif img {
+    border-radius: 12px;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--lennox-red);
+}
+
+/* ------------------------------------------ */
+/* ICONS */
+.icons-section {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: var(--lennox-black) !important;
+    gap: 20px; 
+    border-radius: 10px;
+}
+
+.icon-img {
+    width: 30px;
+    height: 30px;
+}
+
+.add-icon {
+    position: absolute;
+    top: -15px;
+    right: -2px;
+    background-color: var(--lennox-black);
+    font-size: 20px;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-icon img {
+    width: 9px; 
+    height: 9px;
 }
