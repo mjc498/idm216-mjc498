@@ -1,12 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ignore This</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- LINKS -->
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./fonts/font-face.css">
+    
+    <!-- FAVICON -->
+        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+        <title>Case Study</title>
+    </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>Hello, world.</p>
+    <header>
+        <h1>LENNOX GOT LUNCH</h1>
+    </header>
+
+<!-- OVERVIEW -->
+    <section>
+        <h3>The Overview</h3>
+        <div class="text-container">
+            <h4>Introduction</h4>
+                <p>
+                    This case study focuses on the design of a food truck on Drexel University's campus -- Lennox Got Lunch. 
+                    The original design lacked brand uniqueness and engaging interactions. As the front-end developer, I aimed
+                    to enhance the user experience by incorporating interactive features that would make the food truck more
+                    appealing to students and faculty. The redesign focused on creating a more engaging and interactive experience
+                    for users, encouraging them to explore the food truck's menu and offerings. With my design, users will experience
+                    memorable animations and dynamic hover states that enhance functionality and provide easy navigation. 
+                </p>
+        </div>
+    </section>
+
+<!-- CONTEXT -->
+    <section>
+        <h3>Context and Challenge</h3>
+        <div class="text-container">
+            <h4>Background</h4>
+                <p>
+                    My final project for IDM216 focuses on designing a mobile friendly application for a food truck of our choosing from 
+                    IDM215 called Lennox Got Lunch. Conducted as a group effort, the project was part of the User Experience Design II 
+                    class taught by Professor Paul Phan. There were a total of 5 team members. My primary position was the front-end developer and 
+                    secondarily the Project Management role. Over the course of 10 weeks, six assignments helped in the production 
+                    of my final project:
+                </p>
+                    <ul>
+                        <li><a href="https://idm216-lennox-website.vercel.app/" target="_blank">Web Page</li>
+                        <li><a href="https://github.com/mjc498/idm216-lennox-app" target="_blank">Team Repo and Collaboration</a></li>
+                        <li><a href="https://idm216-lennox-website.vercel.app/assets.html" target="_blank">Project Web Page</a></li>
+                        <li>Alpha - Build</li>
+                        <li>Beta - Build</li>
+                        <li>Final - Build</li>
+                    </ul>
+                <p>
+                    The project operated on a zero-cost budget, aligning with its goal to provide students like myself hands-on experience with 
+                    modern design theories and front-end scripting languages, such as HTML, CSS, and JS. This project also fulfilled the class's 
+                    learning objectives by focusing on the creation of fully functioning web applications via a full production pipeline. 
+                    Throughout this course, I also made sure to incorporate User Design practices along the way of front-end development.
+                </p>
+        
+            <h4>The Problem</h4>
+                <p>
+                    Lennox Got Lunch is a food truck located on Drexel University's campus. The truck lacked a proper brand identity and
+                    engaging interactions that would make it more appealing to students and faculty. There was nothing to base this project
+                    on except for the <a href="https://www.figma.com/files/team/1240741858362641420/project/322894976/IDM216-Lennox?fuid=1289367730452544438" 
+                    target="_blank">Figma Design</a> that was created in IDM215. With designs fully created on Figma, it was my duty to bring
+                    these designs to life through code.
+                </p>
+            
+            <h4>Goals & Objectives</h4>
+                <p>
+                    I approached the Lennox Got Lunch food truck app with a focus on maintaining a legible and clean codebase. It was important that 
+                    the code remained accessible and well-organized for my teammates and even the professor to understand. Another key objective was 
+                    ensuring my teammates were consistently aware of the content being committed via GitHub. Over the course of 10 weeks, I was responsible
+                    for hard-coding design assets, components, animations, interactions, and other elements created in Figma. Given the vast amount of 
+                    content, I stayed on top of my goals and objectives to maintain clear and consistent communication, especially with the back-end 
+                    developer, while also ensuring legibility and organization in my code.
+                </p>
+        </div>
+    </section>
+
+<!-- PROCESS -->
+    <section>
+        <h3>Process and Insight</h3>
+        <div class="text-container">
+            <h4>Target Audience</h4>
+                <p>
+                    The app was designed to be user-friendly and accessible to all users. It was also built to be responsive on all devices, including 
+                    desktop, tablet, and mobile. We aimed to follow the Web Content Accessibility Guidelines (WCAG) to ensure that all users could 
+                    navigate the app with ease. Users of food delivery or food-related applications can be just about anyone. Whether someone is 
+                    looking for convenience in distance or time or simply wants to try a new place, the Lennox Got Lunch app caters to all users.
+                </p>
+        </div>
+    </section>
+
+<!-- SOLUTION -->
+    <section>
+        <h3>The Solution</h3>
+        <div class="text-container">
+            <h4><a href="https://idm241-mjc498.netlify.app/final-build" target="_blank">Link to Final Build</a></h4>
+            <h4>Order Status Animations</h4>
+                <p>
+                    For my first code-based animation, I wanted something that visually shows users that their order was being placed,
+                    prepared, readied, and completed. The animation starts as soon as the page loads so that <strong>DOMContentLoaded</strong> 
+                    could prepare elements before executing JavaScript. Key elements are then selected, including the order status steps 
+                    <strong>(.order-status-item)</strong>, the progress line <strong>(.order-status-line)</strong>, and other text that updates as the 
+                    order moves through each stage. I also store an array of “active” icons to visually indicate progression -- black and white icons
+                    smoothly fading into red and black colors. Lastly, After 5 seconds, the "Order In Progress" text changes to "Order Complete" 
+                    to confirm the final state.
+                </p>         
+                <div class="final-gif"><img src="images/order-status-animation.gif" alt="gif 1 of order status animation container"></div>
+
+            <h4>Modal Animations</h4>
+                <p>
+                    I set up two different modals throughout the Checkout Flow: one for choosing a payment method and another for adding a new card. The 
+                    payment method modal opens when the user clicks the small arrow next to the payment section. When clicked, it triggers a function that 
+                    makes the modal appear while smoothly dimming the overlay. Inside this modal, users can see their current payment method and choose 
+                    between Apple Pay, Venmo, or "Add a New Card".
+                </p>
+                <div class="final-gif"><img src="images/modal-animations.gif" alt="gif 2 of modal animated container"></div>
+
+                <p>
+                    The second modal appears when the user selects "Add a New Card" within the first modal. Instead of just closing the first modal and opening 
+                    the second as a separate task, I made it more natural by transitioning from one modal to another. If the user changes their mind, they can 
+                    click the back arrow, which brings them back to the payment selection screen. I focused on making these modals intuitive so users can select a
+                    payment method with ease.
+                </p>
+                
+            
+            <h4>Iconography</h4>
+                <p>
+                    <section class="icons-section">
+                        <img src="images/icons/add-icon.png" alt="Icon" class="icon-img">
+                        <img src="images/icons/heart-filled-icon.png" alt="Icon" class="icon-img">
+                        <img src="images/icons/heart-icon.png" alt="Icon" class="icon-img">
+                        <img src="images/icons/home-filled-icon.png" alt="Icon" class="icon-img">
+                        <img src="images/icons/home-icon.png" alt="Icon" class="icon-img">
+                        <img src="images/icons/menu-filled-icon.png" alt="Icon" class="icon-img">
+                        <img src="images/icons/menu-icon.png" alt="Icon" class="icon-img">
+                        <img src="images/icons/profile-filled-icon.png" alt="Icon" class="icon-img">
+                        <img src="images/icons/profile-icon.png" alt="Icon" class="icon-img">
+                    </section>
+                </p>
+        </div>
+    </section>
+
+<!-- RESULTS -->
+    <section>
+        <h3>The Results</h3>
+        <div class="text-container">
+            <h4>Conclusion</h4>
+                <p>
+                    In conclusion, this 10-week project was a success. I met the necessary requirements to achieve my Final Build as the front-end
+                    developer. I coded and developed a fully functioning moble app that could be ready for the next stop of production.  
+                    Each page shows simple experiences that is straightforward, but also memorable, for users to remember and continue using.
+                    Presenting various phases of the project to my professor and classmates in the IDM216 course was invaluable for gathering 
+                    constructive feedback and critiques.
+                </p>
+
+                <p>
+                    Through this project, I developed better time management skills and understood the significance of deadlines on a professional level. 
+                    All of my design decisions were made with careful consideration of the Web Content Accessibility Guidelines (WCAG). For example, 
+                    I ensured that all the button texts passed the color testto enhance readability for all users. It also taught me a lot of patience 
+                    with different people who have unique skill sets and attitudes toward approaching a project.
+                </p>
+
+                <p>
+                    Reflecting on this 10-week process, I realize it could have been more efficient if I had consistently documented and tracked the feedback I received. 
+                    This would have allowed me to better evaluate my progress from the beginning of the project to its completion. There was a lot of 
+                    miscommunication that could have been avoided if every role on the team updated each other to understand what needs to be done or fixed. 
+                    Additionally, I should have separated each design build (Alpha, Beta, Final) into three separate branches to avoid any confusion or even just 
+                    created separate html files for each build. This would have made it easier to track the progress of each build and to see the changes made
+                    from one build to the next.
+                </p>
+        </div>
+    </section>
 </body>
 </html>
+
+<script>
+// DROPDOWN
+    document.addEventListener("DOMContentLoaded", () => {
+        const dropdownBtn = document.querySelector(".dropdown-btn");
+        const dropdownMenu = document.getElementById("timeDropdown");
+        const dropdownItems = dropdownMenu.querySelectorAll("li");
+        const asapBtn = document.querySelector(".asap-btn");
+    
+        function toggleDropdown(event) {
+            event.stopPropagation();
+            dropdownMenu.classList.toggle("open");
+        }
+    
+        function selectTime(event) {
+            const selectedTime = event.target.innerText;
+            dropdownBtn.innerHTML = `${selectedTime} <img class="dropdown-icon" src="../icons/arrow-dropdown-icon.svg">`;
+            dropdownMenu.classList.remove("open");
+            
+            asapBtn.classList.remove("active");
+            asapBtn.style.backgroundColor = ""; 
+            asapBtn.style.color = "";
+        }
+    
+        function closeDropdown(event) {
+            if (!dropdownMenu.contains(event.target) && event.target !== dropdownBtn) {
+                dropdownMenu.classList.remove("open");
+            }
+        }
+    
+        function toggleAsap() {
+            if (asapBtn.classList.contains("active")) {
+                asapBtn.classList.remove("active");
+                asapBtn.style.backgroundColor = ""; 
+                asapBtn.style.color = "";
+    
+            } else {
+                asapBtn.classList.add("active");
+                asapBtn.style.backgroundColor = "black";
+                asapBtn.style.color = "white";
+    
+                dropdownBtn.innerHTML = `Select a Time <img class="dropdown-icon" src="../icons/arrow-dropdown-icon.svg">`;
+            }
+        }
+    
+        dropdownBtn.addEventListener("click", toggleDropdown);
+        dropdownItems.forEach(item => item.addEventListener("click", selectTime));
+        document.addEventListener("click", closeDropdown);
+        asapBtn.addEventListener("click", toggleAsap);
+    });
+
+// HEART BUTTON
+document.addEventListener("DOMContentLoaded", () => {
+    const heartButton = document.getElementById("heartButton");
+    const heartIcon = document.getElementById("heartIcon");
+
+    let isLiked = false;
+
+    heartButton.addEventListener("click", () => {
+        isLiked = !isLiked; 
+
+        if (isLiked) {
+            heartIcon.src = "images/icons/heart-coloredfilled-icon.png";
+            heartButton.classList.add("heart-active");
+        } else {
+            heartIcon.src = "images/icons/heart-colored-icon.png"; 
+            heartButton.classList.remove("heart-active");
+        }
+
+        heartButton.classList.remove("heart-active"); 
+        void heartButton.offsetWidth; 
+        heartButton.classList.add("heart-active");
+    });
+});
+</script>
