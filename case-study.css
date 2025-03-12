@@ -1,0 +1,48 @@
+/* ------------------------------------------ */
+/* COLORS */
+:root {
+    --lennox-tan: #FDF9F1;
+    --lennox-white: #FFF;
+    --lennox-black: #222222;
+    --lennox-green: #D4E377;
+    --lennox-red: #EF5A30;
+    --lennox-orange: #FEAE33;
+    --lennox-gray: #8D8D8D;
+    --lennox-lightgray: #CECBCB;
+    --lennox-darkgray: #4F4F4F;
+    --lennox-shadow: rgba(0, 0, 0, 0.60);
+}
+
+/* ------------------------------------------ */
+/* TYPOGRAPHY */
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('TuskerGrotesk-5500Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Moderat';
+    src: url('Moderat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------------------------------------------ */
+/* GENERAL STYLES */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Tusker Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--lennox-black);
+    margin: 0;
+}
